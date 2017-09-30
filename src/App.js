@@ -1,24 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import WaterTable from "@page/waterTable/index.js";
-import TopNav from "@page/topNav/index.js";
+import routes from "@route/index.js";
+import { Router, hashHistory } from "react-router";
 
 export class App extends Component {
   static propTypes = {};
 
   render() {
-    return (
-      <div className="container">
-        <TopNav />
-        <WaterTable />
-      </div>
-    );
+    return <Router history={hashHistory} routes={routes} />;
   }
 }
 
-const mapStateToProps = state => ({
-});
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {};
 
