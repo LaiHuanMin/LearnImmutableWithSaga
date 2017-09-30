@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^2.13.4",
     "immutable": "^3.8.1",
+    "moment": "^2.18.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

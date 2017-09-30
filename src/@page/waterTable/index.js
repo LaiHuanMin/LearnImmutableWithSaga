@@ -31,11 +31,39 @@ export class WaterTable extends Component {
                           value: fromJS(originData)
                         });
                       }}
-                    > 
+                    >
                       Add
                     </button>
-                    <button className="btn btn-danger">Reduce</button>
-                    <button className="btn btn-warning">CleanAll</button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        var originData = val.toJS();
+                        originData.map((item, index) => {
+                          item.value.splice(0, 1);
+                        });
+                        this.props.updateTable({
+                          entry: ["totalContent", "table", key],
+                          value: fromJS(originData)
+                        });
+                      }}
+                    >
+                      Reduce
+                    </button>
+                    <button
+                      className="btn btn-warning"
+                      onClick={() => {
+                        var originData = val.toJS();
+                        originData.map((item, index) => {
+                          item.value = [];
+                        });
+                        this.props.updateTable({
+                          entry: ["totalContent", "table", key],
+                          value: fromJS(originData)
+                        });
+                      }}
+                    >
+                      CleanAll
+                    </button>
                   </div>
                   <TableContent data={val} name={key} />
                 </div>
