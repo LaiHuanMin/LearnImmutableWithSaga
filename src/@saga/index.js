@@ -1,6 +1,4 @@
-import tableSaga from './table.js'
+import tableSaga from "./table.js";
+import snackSaga from "./snack.js";
 
-export default [
-    tableSaga
-]
-
+export default [tableSaga, snackSaga];

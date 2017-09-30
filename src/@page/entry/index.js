@@ -4,7 +4,12 @@ const routeList = [
   {
     name: "Immutable测试数据",
     desc: "对比了一下，感觉Immutable这个性能的确提升很多",
-    path: "/immutable"
+    path: "immutable"
+  },
+  {
+    name: "SagaSnackUse",
+    desc: "学习如何合适的提醒，bySaga",
+    path: "snack"
   }
 ];
 
@@ -18,7 +23,11 @@ class Entry extends Component {
           </a>
           {routeList.map((item, index) => {
             return (
-              <a href="/#/immutable" key={index} className="list-group-item">
+              <a
+                href={"/#/" + item.path}
+                key={index}
+                className="list-group-item"
+              >
                 <h4 className="list-group-item-heading">{item.name}</h4>
                 <p className="list-group-item-text">{item.desc}</p>
               </a>

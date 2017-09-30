@@ -1,6 +1,7 @@
 import ImmutablePage from "@page/ImmutableTable/index.js";
 import EntryPage from "@page/entry/index.js";
 import RootPage from "@page/root.js";
+import SagaSnackPage from "@page/SagaSnackUse/index.js";
 
 export default {
   path: "/",
@@ -16,6 +17,10 @@ export default {
     {
       path: "immutable",
       component: ImmutablePage
+    },
+    {
+      path: "snack",
+      component: SagaSnackPage
     }
   ]
 };
