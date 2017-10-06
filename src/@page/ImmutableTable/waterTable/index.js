@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import TableContent from "./component/table.js";
 import { connect } from "react-redux";
 import { Seq, List, fromJS } from "immutable";
+import OneContent from "./component/one.js";
 
 export class WaterTable extends Component {
   static propTypes = {};
@@ -10,6 +11,7 @@ export class WaterTable extends Component {
   render() {
     return (
       <div className="row col-md-12">
+        <OneContent />
         {this.props.tableData
           .map((val, key) => {
             return (
@@ -51,7 +53,7 @@ export class WaterTable extends Component {
                     </button>
                     <button
                       className="btn btn-warning"
-                      onClick={() => { 
+                      onClick={() => {
                         var originData = val.toJS();
                         originData.map((item, index) => {
                           item.value = [];

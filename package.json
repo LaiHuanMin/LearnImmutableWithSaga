@@ -17,9 +17,9 @@
     "redux-saga": "^0.15.6"
   },
   "scripts": {
-    "start": "set NODE_PATH=./src&&react-scripts start",
-    "build": "set NODE_PATH=./src&&react-scripts build",
-    "test": "set NODE_PATH=./src&&react-scripts test --env=jsdom",
-    "eject": "set NODE_PATH=./src&&react-scripts eject"
+    "start": "NODE_PATH=./src&&react-scripts start",
+    "build": "NODE_PATH=./src&&react-scripts build",
+    "test": "NODE_PATH=./src&&react-scripts test --env=jsdom",
+    "eject": "NODE_PATH=./src&&react-scripts eject"
   }
 }
