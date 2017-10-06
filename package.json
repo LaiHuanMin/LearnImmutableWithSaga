@@ -1,7 +1,7 @@
 {
   "name": "immutable",
   "version": "0.1.0",
-  "private": true,jkljlkj
+  "private": true,
   "dependencies": {
     "antd": "^2.13.4",
     "immutable": "^3.8.1",
